@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js assignment</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" media="screen and (max-width:480px)" href="/responsive.css">
+
+</head>
+
+<body class="body">
+
+    <!-- This is a Home Page -->
+
+    <div class="QuizHomePage" id="QHP">
+        <div class="homecontainer">
+
+            <img src="/Testbook_App-removebg-preview.png" alt="Network Slow" style="height:130px;width:130px ;">
+            <h1>Hello user!</h1>
+            <p>Enter your name to continue the Quiz.</p>
+
+            <form action="">
+                <input type="text" name="yname" id="yname" placeholder="ENTER YOUR NAME..." value="">
+
+                <span>
+                    <button type="button" id="enter">ENTER</button>
+                </span>
+            </form>
+            <p id="welcome"></p>
+            <p id="timenote"> You'll have <span style="color:rgba(127, 219, 35, 0.848)">30</span> seconds to answer each
+                questions</p>
+
+        </div>
+
+        <hr>
+
+        <div class="Category">
+
+            <h1>Select Category</h1>
+
+            <div class="buttons" id="CategoryButtons">
+                <!-- here is the Category buttons -->
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- this is the rule page -->
+
+    <div id="rulecontainer" class="rule">
+
+        <div>1.There are only 10 questions</div>
+        <div> 2.You will have a 30 seconds per each question.</div>
+        <div> 3.Once you select your answer,it can't be undone</div>
+        <div> 4.You can't select any option once it goes off.</div>
+        <div>5.You can't exit from the Quiz while you're playing.</div>
+        <div>
+            6.You'll get option on the basis of your correct answer.</div> .
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+    <!-- This is a QuizPage   -->
+
+    <div class="QuizPage" id="QP">
+        <h2 class="topic" id="CategoryTitle"></h2>
+        <h3 id="wishestitle">Give Your Best-- <span id="wishes"></span></h3>
+
+        <div class="appinfo">
+            <div class="timer">
+                <span id="timer"></span>
+            </div>
+            <div class="score">
+                <span>score</span><span id="scorecount"></span>
+            </div>
+        </div>
+
+        <div class="questioncountBOX">
+            <div class="questioncount">
+                <p id="quiznumcount"></p>
+            </div>
+        </div>
+
+        <div class="q-abox">
+
+            <div class="quizcontainer" id="Qcontainer">
+
+
+
+
+            </div>
+            <div class="anscontainer" id="Acontainer">
+
+            </div>
+
+        </div>
+
+        <div id="NextButton"><button id="nextbtn">Next</button></div>
+        <div id="SubmitButton"><button id="submitbtn" onclick="showResult()">Submit</button></div>
+
+
+
+
+    </div>
+    </div>
+    <!-- this is a result page -->
+
+    <div class="ResultPage" id="Rpage">
+
+
+        <h2 id="QuizResult">Quiz Result</h2>
+
+        <div class="ResultData">
+
+            <p id="myname"> <span> : your result is </span></p>
+            <p id="totalTime"> <span> Total Time Taken : </span> </p>
+            <p id="totalQuestion"> <span> Total Question : </span> </p>
+            <p id="totalAttempt"> <span> Attempt : </span> </p>
+            <p id="totalCorrect"> <span> Correct : </span> </p>
+            <p id="totalWrong"> <span> Wrong : </span> </p>
+            <p id="Percentage"> <span> Percentage : </span> </p>
+
+            <div class="buttonofresult">
+
+                <button type="button" id="GOHome" onclick="GoToHome()">Go To Home</button>
+                <button type="button" id="Restart" onclick="Restart()"> StartAgain </button>
+                <button onclick="window.print()" type="button" id="print">Print</button>
+
+            </div>
+
+
+
+
+
+        </div>
+
+
+    </div>
+
+
+    <script src="/quiz.js"></script>
+    <script src="/quizdata.js"></script>
+
+
+
+</body>
+
+</html>

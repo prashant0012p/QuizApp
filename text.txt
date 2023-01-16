@@ -1,0 +1,14 @@
+    var randomnumber = quizData[Index].category.quizWrap[Math.floor(Math.random() * quizData[Index].quizWrap.length)].QUESTION;
+
+
+    if(displayedQuestion.length == 10){
+        alert("Pura Thai Gaya")
+    }
+
+    if (displayedQuestion.indexOf(randomnumber) === -1) {
+        displayedQuestion.push(randomnumber);
+        return randomnumber;
+    }
+    else {
+        return generateRandomQuestionSequence();
+    }
