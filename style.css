@@ -132,6 +132,47 @@ hr {
 
 
 
+
+/* here is the rule page */
+
+#rulecontainer{
+
+display: none;
+
+
+}
+
+
+
+.rule{
+  
+ 
+    height: 100vh;
+    font-size: x-large;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 900;
+    font-style:normal;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-around;
+
+
+    
+}
+.rule > div {
+
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    padding: 30px;
+    text-align: center;
+}
+
+
 /* here is the style of quiz page*/
 
 

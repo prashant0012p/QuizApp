@@ -1,6 +1,6 @@
 
 
-
+let RulesPage = document.getElementById("rulecontainer");
 let categoryBox = document.getElementById("CategoryButtons");
 let categoryText = document.getElementById("CategoryTitle");
 let questionBox = document.getElementById("Qcontainer");
@@ -35,6 +35,12 @@ let ResulttotalAttempt = document.getElementById("totalAttempt");
 let ResulttotalCorrect = document.getElementById("totalCorrect");
 let ResulttotalWrong = document.getElementById("totalWrong");
 let ResultPercentage = document.getElementById("Percentage");
+
+
+
+
+
+
 
 
 document.getElementById('enter').onclick = function validname() {
@@ -86,13 +92,30 @@ function selectedCategory(ele) {
         alert("please enter your name")
     }
     else {
-        Index = ele.getAttribute("data-id");
-        categoryText.innerHTML = quizData[Index].category;
+
+
+       
         QuizHomePage.classList.add("hide");
-        QuizPage.classList.add("show");
-        goodluck.innerHTML = username;
-        startEveryQuestionTimer();
-        nextQuestion();
+        RulesPage.style.display = "block"
+
+
+
+
+        setTimeout(() => {
+
+            Index = ele.getAttribute("data-id");
+            categoryText.innerHTML = quizData[Index].category;
+            RulesPage.style.display = "none"
+            QuizPage.classList.add("show");
+            goodluck.innerHTML = username;
+            startEveryQuestionTimer();
+            nextQuestion();
+
+
+        }, 10000);
+
+
+
     }
 }
 
@@ -139,26 +162,26 @@ function startEveryQuestionTimer() {
 nextQuestionBtn.addEventListener("click", nextQuestion);
 function nextQuestion() {
 
-    if(quizData[Index].quizWrap.length === questionCounter  ){
+    if (quizData[Index].quizWrap.length === questionCounter) {
 
-     
-     SubmitButton.style.display = "inline"
-     nextQuestionBtn.style.display = "none";
 
-     
+        SubmitButton.style.display = "inline"
+        nextQuestionBtn.style.display = "none";
+
+
 
 
     }
-  
-    else{
+
+    else {
 
         generateRandomQuestion();
 
     }
 
 
-    
-    
+
+
 
 
 
@@ -284,7 +307,7 @@ function option(option) {
         ScoreCount.innerHTML = " : " + correctAnswers;
         // nextButton show only when we click any option (1,2,3,4) by  ans.setAttribute("onclick", "option(this)")
         nextQuestionBtn.style.display = "inline";
-        
+
 
 
 
@@ -423,22 +446,24 @@ function GoToHome() {
 }
 
 
-function Restart(){
+function Restart(ele) {
 
 
 
 
 
-    ResultPage.style.display = "none";
-    QuizPage.style.display = "block"
+ResultPage.style.display = "none";
+QuizPage.style.display = "block";
+timer = 300;    
+questionCounter = 0;
+correctAnswers = 0;
+startEveryQuestionTimer();
+nextQuestion();
+generateRandomQuestion();
+showResult();
 
-    questionCounter = 0;  // how many quiz
-    correctAnswers = 0;   // how many correct
-    timer = 300;          // time
-     
-  
-  
-    
+
+
 
 
 

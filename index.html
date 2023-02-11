@@ -8,7 +8,7 @@
     <title>Js assignment</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="">
-    <link rel="stylesheet" media="screen and (max-width:480px)" href="/responsive.css">
+    <link rel="stylesheet" media="screen and (max-width:480px)" href="responsive.css">
 
 </head>
 
@@ -52,6 +52,30 @@
 
     </div>
 
+
+    <!-- this is the rule page -->
+
+    <div id="rulecontainer" class="rule">
+
+        <div>1.There are only 10 questions</div>
+        <div> 2.You will have a 30 seconds per each question.</div>
+        <div> 3.Once you select your answer,it can't be undone</div>
+        <div> 4.You can't select any option once it goes off.</div>
+        <div>5.You can't exit from the Quiz while you're playing.</div>
+        <div>
+            6.You'll get option on the basis of your correct answer.</div> .
+
+
+
+
+
+
+
+
+    </div>
+
+
+
     <!-- This is a QuizPage   -->
 
     <div class="QuizPage" id="QP">
@@ -63,7 +87,7 @@
                 <span id="timer"></span>
             </div>
             <div class="score">
-                <span >score</span><span id="scorecount"></span>
+                <span>score</span><span id="scorecount"></span>
             </div>
         </div>
 
@@ -84,7 +108,7 @@
             <div class="anscontainer" id="Acontainer">
 
             </div>
-            
+
         </div>
 
         <div id="NextButton"><button id="nextbtn">Next</button></div>
@@ -113,14 +137,14 @@
             <p id="Percentage"> <span> Percentage : </span> </p>
 
             <div class="buttonofresult">
-               
+
                 <button type="button" id="GOHome" onclick="GoToHome()">Go To Home</button>
                 <button type="button" id="Restart" onclick="Restart()"> StartAgain </button>
                 <button onclick="window.print()" type="button" id="print">Print</button>
 
             </div>
 
-         
+
 
 
 
@@ -130,8 +154,8 @@
     </div>
 
 
-    <script src="/quiz.js"></script>
-    <script src="/quizdata.js"></script>
+    <script src="quiz.js"></script>
+    <script src="quizdata.js"></script>
 
 
 
